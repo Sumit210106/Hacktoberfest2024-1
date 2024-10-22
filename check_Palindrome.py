@@ -1,30 +1,13 @@
-def isPalindrome(str,rev_str):
-    x = str == rev_str
-    return x
-
-while True:
-    try:
-        choice = int(input("Press the number corresponding to the option to select it\n0.\tExit\n1.\tCheck for Palindrome\n"))
-
-        if choice == 1:
-            string = input("Enter the string you want to check: ")
-            low_str = string.lower()
-            rev_str = low_str[-1::-1]
-
-            result = isPalindrome(low_str,rev_str)
-            if result == True:
-                print(f"\n{string} is a palindrome!")
-            elif result == False:
-                print(f"\n{string} is not a palindrome as it spells {rev_str} when reversed.")
-            else:
-                print("invalid input")
-
-        elif choice == 0:
-            print("\n####################\tThank you for using my program\t####################")
-            break
-        else:
-            print("\nInvalid input")
-
-    except:
-        print("\nEnter an integer value corresponding to your choice!")
-        
+def Palindrome(str_,rev_str):
+    str_=str(str_)
+    rev = str(str_[::-1])
+    if rev == rev_str:
+        print(f"{str_} and {rev_str} are palindrome of each other")
+    else:
+        print(f"{str_} and {rev_str} are not palindrome of each other")
+    return ""
+print("------Enter the string in the input section------")
+str_=input("Enter the frist string to check: ")
+rev_str=input("Enter the second string to check: ")
+print(Palindrome(str_,rev_str))
+print("THANKYOU FOR USING THE PROGRAM !!!")
